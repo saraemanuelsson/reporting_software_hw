@@ -35,7 +35,12 @@ public class CreditCardTest {
 
     @Test
     public void canAddCharge(){
-        creditCard.addCharges(10.00);
+        creditCard.charge(10.00);
         assertEquals(1, creditCard.getNumberOfCharges());
+    }
+
+    @Test
+    public void canGetTransactionCost() {
+        assertEquals(2.00, creditCard.getTransactionCost(100.00), 0.01);
     }
 }

@@ -2,7 +2,7 @@ package Cards;
 
 import java.util.ArrayList;
 
-public abstract class PaymentCard {
+public abstract class PaymentCard implements ICharge{
 
     private int cardNumber;
     private String expiryDate;
@@ -32,8 +32,12 @@ public abstract class PaymentCard {
         return this.charges;
     }
 
-    public void addCharges(double charge) {
+    public void charge(double charge) {
         this.charges.add(charge);
+    }
+
+    public double getTransactionCost(double purchaseAmount) {
+        return 0.02 * purchaseAmount;
     }
 
     public int getNumberOfCharges() {

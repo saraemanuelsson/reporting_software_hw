@@ -16,4 +16,9 @@ public class CreditCard extends PaymentCard{
     public void setCreditLimit(double creditLimit) {
         this.creditLimit = creditLimit;
     }
+
+    public void charge(double charge){
+        this.getCharges().add(charge);
+        this.creditLimit -= charge;
+    }
 }
