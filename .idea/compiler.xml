@@ -9,5 +9,8 @@
         <module name="reporting_software_hw" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="reporting_software_hw" target="1.5" />
+    </bytecodeTargetLevel>
   </component>
 </project>
